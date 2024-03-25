@@ -1,6 +1,6 @@
 name: adaptive_pop_scope
 description: Custom pop scope widget to allow Apple user (iOS, iPad and macOs) uses the back gesture
-version: 1.0.0
+version: 1.0.1
 repository: https://github.com/abdur-rohman/Adaptive-Pop-Scope
 
 environment:

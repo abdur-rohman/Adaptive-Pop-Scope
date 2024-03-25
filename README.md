@@ -6,8 +6,9 @@
 <div align="center">
 
 [![Buy Me Coffee Badge](https://img.shields.io/badge/-Buy_Me_a_Coffee-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=535353)](https://www.buymeacoffee.com/abdurrohmaj)
-[![Instagram Badge](https://img.shields.io/badge/instagram-F3F3F3?style=for-the-badge&logo=instagram&logoColor=d62976)](https://www.instagram.com/abdur_rohman.dev/)
 [![Linkedin Badge](https://img.shields.io/badge/linkedin-0a66c2?style=for-the-badge&logo=linkedin&logoColor=ffffff)](https://www.linkedin.com/in/abdur-rohman-dev/)
+[![Instagram Badge](https://img.shields.io/badge/instagram-F3F3F3?style=for-the-badge&logo=instagram&logoColor=d62976)](https://www.instagram.com/abdur_rohman.dev/)
+[![Pub Dev Badge](https://img.shields.io/badge/Pub-1.0.1-42A5F5?style=for-the-badge&logo=flutter)](https://pub.dev/packages/adaptive_pop_scope)
 
 </div>
 
