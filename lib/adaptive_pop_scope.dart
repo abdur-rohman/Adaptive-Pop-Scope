@@ -12,12 +12,12 @@ class AdaptivePopScope extends StatefulWidget {
   final double? swipeThreshold;
 
   const AdaptivePopScope({
-    Key? key,
+    super.key,
     this.swipeWidth,
     this.swipeThreshold,
     this.onWillPop,
     required this.child,
-  }) : super(key: key);
+  });
 
   @override
   State<AdaptivePopScope> createState() => _AdaptivePopScopeState();
@@ -47,7 +47,7 @@ class _AdaptivePopScopeState extends State<AdaptivePopScope>
   @override
   Widget build(BuildContext context) => PopScope(
         canPop: widget.onWillPop == null,
-        onPopInvoked: (didPop) {
+        onPopInvokedWithResult: (didPop, _) {
           if (didPop || _isApple) return;
           widget.onWillPop?.call();
         },
@@ -62,8 +62,9 @@ class _AdaptivePopScopeState extends State<AdaptivePopScope>
                   }
                 },
                 onHorizontalDragUpdate: (details) {
-                  if (!_isSwiping || _startDx == null || _startDy == null)
+                  if (!_isSwiping || _startDx == null || _startDy == null) {
                     return;
+                  }
 
                   final dx = details.globalPosition.dx - _startDx!;
                   final dy = details.globalPosition.dy - _startDy!;
@@ -86,7 +87,7 @@ class _AdaptivePopScopeState extends State<AdaptivePopScope>
                       _currentMarginLeft >= _swipeThreshold;
                   if (isThresholdExceeded) {
                     widget.onWillPop?.call().then((canBack) {
-                      if (canBack) Navigator.pop(context);
+                      if (canBack && context.mounted) Navigator.pop(context);
                     }).whenComplete(() => _marginLeftNotifier.value = 0);
                   } else {
                     _marginLeftNotifier.value = 0;
