@@ -37,7 +37,7 @@ import 'package:adaptive_will_pop_scope/adaptive_will_pop_scope.dart';
 
 ## Usage
 
-Adaptive Will Pop Scope adds two optional params `swipeWidth` to determines the maximum width that user can swipe (by default it was assigned to the screen width) and `swipeThreshold` to indicates the `onWillPop` will be called if the user swipe over this value (by default it was assigned to half of the `swipeWidth`).
+Adaptive Will Pop Scope adds two optional params `swipeWidth` to determines the maximum width that user can swipe (by default it was assigned to the screen width) and `swipeThreshold` to indicates the `onWillPop` will be called if the user swipe over this value (by default it was assigned to one third of the `swipeWidth`).
 
 ```dart
 class SeconPage extends StatefulWidget {
@@ -56,7 +56,7 @@ class _SeconPageState extends State<SeconPage> {
     return AdaptivePopScope(
       onWillPop: () async => await _showAlertDialog(context) ?? false,
       swipeWidth: screenWidth,
-      swipeThreshold: screenWidth / 2,
+      swipeThreshold: screenWidth / 3,
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Second Page'),
