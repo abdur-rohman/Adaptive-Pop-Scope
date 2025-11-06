@@ -44,12 +44,18 @@ class _AdaptivePopScopeState extends State<AdaptivePopScope>
     super.dispose();
   }
 
+  Future<void>? _onWillPop(BuildContext context) {
+    return widget.onWillPop?.call().then((canBack) {
+      if (canBack && context.mounted) Navigator.pop(context);
+    });
+  }
+
   @override
   Widget build(BuildContext context) => PopScope(
         canPop: widget.onWillPop == null,
-        onPopInvokedWithResult: (didPop, _) {
-          if (didPop || _isApple) return;
-          widget.onWillPop?.call();
+        onPopInvokedWithResult: (didPop, __) {
+          if (didPop) return;
+          _onWillPop(context);
         },
         child: _isApple && widget.onWillPop != null
             ? GestureDetector(
@@ -86,9 +92,9 @@ class _AdaptivePopScopeState extends State<AdaptivePopScope>
                   final isThresholdExceeded =
                       _currentMarginLeft >= _swipeThreshold;
                   if (isThresholdExceeded) {
-                    widget.onWillPop?.call().then((canBack) {
-                      if (canBack && context.mounted) Navigator.pop(context);
-                    }).whenComplete(() => _marginLeftNotifier.value = 0);
+                    _onWillPop(context)?.whenComplete(() {
+                      _marginLeftNotifier.value = 0;
+                    });
                   } else {
                     _marginLeftNotifier.value = 0;
                   }

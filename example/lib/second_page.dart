@@ -2,18 +2,18 @@ import 'package:adaptive_pop_scope/adaptive_pop_scope.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class SeconPage extends StatefulWidget {
-  const SeconPage({super.key});
+class SecondPage extends StatefulWidget {
+  const SecondPage({super.key});
 
   static MaterialPageRoute get route => MaterialPageRoute(
-        builder: (_) => const SeconPage(),
+        builder: (_) => const SecondPage(),
       );
 
   @override
-  State<SeconPage> createState() => _SeconPageState();
+  State<SecondPage> createState() => _SecondPageState();
 }
 
-class _SeconPageState extends State<SeconPage> {
+class _SecondPageState extends State<SecondPage> {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
