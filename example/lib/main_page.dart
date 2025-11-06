@@ -1,4 +1,5 @@
 import 'package:example/second_page.dart';
+import 'package:example/third_page.dart';
 import 'package:flutter/material.dart';
 
 class MainPage extends StatefulWidget {
@@ -16,13 +17,27 @@ class _MainPageState extends State<MainPage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: const Text('Adaptive Will Pop Scope'),
       ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.push(context, SeconPage.route);
-          },
-          child: const Text('Navigate to Second Page'),
-        ),
+      body: Column(
+        spacing: 16,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.push(context, SecondPage.route);
+              },
+              child: const Text('Navigate to Second Page'),
+            ),
+          ),
+          Center(
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.push(context, ThirdPage.route);
+              },
+              child: const Text('Navigate to Third Page'),
+            ),
+          ),
+        ],
       ),
     );
   }
