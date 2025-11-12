@@ -1,4 +1,4 @@
-import 'package:adaptive_pop_scope/adaptive_pop_scope.dart';
+import 'package:adaptive_pop_scope/widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

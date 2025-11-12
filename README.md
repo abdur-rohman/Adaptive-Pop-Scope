@@ -7,8 +7,8 @@
 
 [![Buy Me Coffee Badge](https://img.shields.io/badge/-Buy_Me_a_Coffee-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=535353)](https://www.buymeacoffee.com/abdurrohmaj)
 [![Linkedin Badge](https://img.shields.io/badge/linkedin-0a66c2?style=for-the-badge&logo=linkedin&logoColor=ffffff)](https://www.linkedin.com/in/abdur-rohman-dev/)
-[![Instagram Badge](https://img.shields.io/badge/instagram-F3F3F3?style=for-the-badge&logo=instagram&logoColor=d62976)](https://www.instagram.com/abdur_rohman.dev/)
-[![Pub Dev Badge](https://img.shields.io/badge/Pub-1.0.3-42A5F5?style=for-the-badge&logo=flutter)](https://pub.dev/packages/adaptive_pop_scope)
+[![Instagram Badge](https://img.shields.io/badge/instagram-F3F3F3?style=for-the-badge&logo=instagram&logoColor=d62976)](https://www.instagram.com/mymanjogja.dev/)
+[![Pub Dev Badge](https://img.shields.io/badge/Pub-1.0.4-42A5F5?style=for-the-badge&logo=flutter)](https://pub.dev/packages/adaptive_pop_scope)
 
 </div>
 
@@ -22,17 +22,17 @@ Adaptive pop scope a custom pop scope widget to allow apple user backs with appl
 
 ## Getting started
 
-Add the `adaptive_will_pop` lib to your `pubspec.yaml` then run the `flutter pub get`
+Add the `adaptive_pop_scope` lib to your `pubspec.yaml` then run the `flutter pub get`
 
 ```yaml
 dependencies:
-  adaptive_will_pop_scope:
+  adaptive_pop_scope:
 ```
 
 import the lib by adding this line code
 
 ```dart
-import 'package:adaptive_will_pop_scope/adaptive_will_pop_scope.dart';
+import 'package:adaptive_pop_scope/.dart';
 ```
 
 ## Usage

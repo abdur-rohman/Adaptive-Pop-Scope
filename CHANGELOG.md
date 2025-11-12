@@ -1,3 +1,9 @@
+## 1.0.4
+
+- Simplify the package import
+- Update the documentation
+- Update Example project to match the latest package version
+
 ## 1.0.3
 
 - Fix Unable to navigate back using the back app bar icon
@@ -15,4 +21,3 @@
 ## 1.0.0
 
 - Inital release for public user
-
