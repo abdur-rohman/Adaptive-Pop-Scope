@@ -1,45 +1,3 @@
- <div align="center">
-    <img  src="https://raw.githubusercontent.com/abdur-rohman/Adaptive-Pop-Scope/main/assets/adaptive-pop-scope.png"/>
- </div>
- </br>
-
-<div align="center">
-
-[![Buy Me Coffee Badge](https://img.shields.io/badge/-Buy_Me_a_Coffee-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=535353)](https://www.buymeacoffee.com/abdurrohmaj)
-[![Linkedin Badge](https://img.shields.io/badge/linkedin-0a66c2?style=for-the-badge&logo=linkedin&logoColor=ffffff)](https://www.linkedin.com/in/abdur-rohman-dev/)
-[![Instagram Badge](https://img.shields.io/badge/instagram-F3F3F3?style=for-the-badge&logo=instagram&logoColor=d62976)](https://www.instagram.com/mymanjogja.dev/)
-[![Pub Dev Badge](https://img.shields.io/badge/Pub-1.0.5-42A5F5?style=for-the-badge&logo=flutter)](https://pub.dev/packages/adaptive_pop_scope)
-
-</div>
-
-Adaptive pop scope a custom pop scope widget to allow apple user backs with apple back gesture
-
-## Preview
-
-| iOS                                                                                                | Android                                                                                                |
-| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| <img src="https://raw.githubusercontent.com/abdur-rohman/Adaptive-Pop-Scope/main/assets/ios.gif"/> | <img src="https://raw.githubusercontent.com/abdur-rohman/Adaptive-Pop-Scope/main/assets/android.gif"/> |
-
-## Getting started
-
-Add the `adaptive_pop_scope` lib to your `pubspec.yaml` then run the `flutter pub get`
-
-```yaml
-dependencies:
-  adaptive_pop_scope:
-```
-
-import the lib by adding this line code
-
-```dart
-import 'package:adaptive_pop_scope/widget.dart';
-```
-
-## Usage
-
-Adaptive Will Pop Scope adds two optional params `swipeWidth` to determines the maximum width that user can swipe (by default it was assigned to the screen width) and `swipeThreshold` to indicates the `onWillPop` will be called if the user swipe over this value (by default it was assigned to one third of the `swipeWidth`).
-
-```dart
 import 'package:adaptive_pop_scope/couple.dart';
 import 'package:adaptive_pop_scope/widget.dart';
 import 'package:flutter/cupertino.dart';
@@ -117,4 +75,3 @@ class _FourthPageState extends State<FourthPage> {
     );
   }
 }
-```

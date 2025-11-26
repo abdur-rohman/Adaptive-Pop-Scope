@@ -1,3 +1,9 @@
+## 1.0.5
+- Support returning data
+- Add new model `Couple`
+- Update the documentation
+- Update Example project to match the latest package version
+
 ## 1.0.4
 
 - Simplify the package import
