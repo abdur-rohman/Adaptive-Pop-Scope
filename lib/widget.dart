@@ -1,13 +1,16 @@
 import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
+import 'package:adaptive_pop_scope/couple.dart';
 
 class AdaptivePopScope extends StatefulWidget {
   /// The shown widget (can be swiped if user used the Apple device)
   final Widget child;
 
-  /// Callback when tried to navigate back to previous page, it will be popped if the return was [true]
-  final Future<bool> Function()? onWillPop;
+  /// Callback when trying to navigate back to the previous page.
+  /// The page will be popped if the returned [Couple.first] is `true`.
+  /// The [Couple.second] is the result returned to the previous page.
+  final Future<Couple<bool, Object?>> Function()? onWillPop;
   final double? swipeWidth;
   final double? swipeThreshold;
 
@@ -45,8 +48,10 @@ class _AdaptivePopScopeState extends State<AdaptivePopScope>
   }
 
   Future<void>? _onWillPop(BuildContext context) {
-    return widget.onWillPop?.call().then((canBack) {
-      if (canBack && context.mounted) Navigator.pop(context);
+    return widget.onWillPop?.call().then((couple) {
+      final canBack = couple.first;
+      final result = couple.second;
+      if (canBack && context.mounted) Navigator.pop(context, result);
     });
   }
 
